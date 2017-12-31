@@ -597,7 +597,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0de0c247e33311b48912b4807bb36c86, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -617,7 +617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -686,7 +687,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 47b1fcce25f2fec44a7280857515ce06, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -706,7 +707,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -874,7 +876,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b1b662c3850c1064fb289b774456e972, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -894,7 +896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -963,7 +966,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a52fb249d037e4e42a15e17909554bb8, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -983,7 +986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -1169,7 +1173,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7f7262580a6877944a29ebb0cda4d47a, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1189,7 +1193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -1325,7 +1330,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d68b5b9e8983c864c93ea40ce97001f8, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1345,7 +1350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -1414,7 +1420,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1e52fe01cf2cfaa4c80345c54bdf528b, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1434,7 +1440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -2008,7 +2015,7 @@ RectTransform:
   m_GameObject: {fileID: 1007387808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 100}
-  m_LocalScale: {x: 0.7909872, y: 0.7909872, z: 0.7909872}
+  m_LocalScale: {x: 0.7920957, y: 0.7920957, z: 0.7920957}
   m_Children:
   - {fileID: 83790159}
   - {fileID: 1433166414}
@@ -2174,7 +2181,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1be7b991049bedb4e807705f734f91d1, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2194,7 +2201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -2222,7 +2230,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1064219987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 242.79997, z: 0}
+  m_LocalPosition: {x: 0, y: 242.79999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1011903109}
@@ -2231,7 +2239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 242.79997}
+  m_AnchoredPosition: {x: 0, y: 242.79999}
   m_SizeDelta: {x: 0, y: -485.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1064219989
@@ -2380,7 +2388,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f80151cff92c3a245a3c802424ed3208, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2400,7 +2408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -2634,7 +2643,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fd69ecbbf2e15cb43b138f9bc1d442e1, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2654,7 +2663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -2991,7 +3001,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: acb7b2092c8d4994887c635f0ff5c6a6, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3011,7 +3021,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -3236,8 +3247,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1502229567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
-  m_LocalScale: {x: 1.6666667, y: 1.6666667, z: 1.6666667}
+  m_LocalPosition: {x: 0, y: 0, z: 99.859856}
+  m_LocalScale: {x: 1.6666666, y: 1.6666666, z: 1.6666666}
   m_Children:
   - {fileID: 100968353}
   - {fileID: 1461130371}
@@ -3749,7 +3760,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3c7eea474ac189b4487684b935ecfe8a, type: 3}
-  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0}
+  m_Color: {r: 0.5411765, g: 0.3019608, b: 0.9568628, a: 0.5}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3769,7 +3780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21687972fbf50be4785f2fdd58accdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAlpha: 0.2
+  flash: 1
+  alphaOffset: 0.1
   alphaChangeTime: 2
   targetAlpha: 0
   smoothAlpha: 0.1
@@ -3828,7 +3840,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.1056442, y: -400.02563}
+  m_ConnectedAnchor: {x: -1.1071937, y: -400.58624}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
