@@ -8,11 +8,13 @@ public class GemCombo : MonoBehaviour {
     private GameObject marbleSpawner;
     private BackgroundBright[] backgroundLayers;
     private Text comboTextFeedback;
+    private MarbleSpawner marbleSpawnerComponent;
 
     public int marblesPerCombo = 2;
     public float comboCooldown;
     public int currentCombo = 0;
     public int comboMax = 5;
+    private bool fever;
 
     Coroutine comboCooldownCoroutine;
 
@@ -20,6 +22,8 @@ public class GemCombo : MonoBehaviour {
     void Start () {
         marbleSpawner = GameObject.Find("MarbleSpawner");
         marbleSpawner.transform.localScale = new Vector3(0.0f, marbleSpawner.transform.localScale.y, 1.0f);
+        marbleSpawnerComponent = marbleSpawner.GetComponent<MarbleSpawner>();
+
         backgroundLayers = GameObject.Find("Background/Layers").GetComponentsInChildren<BackgroundBright>();
 
         comboTextFeedback = GameObject.Find("ComboUI").GetComponentInChildren<Text>();
@@ -57,7 +61,8 @@ public class GemCombo : MonoBehaviour {
         {
             backgroundLayers[i].UpdateAlpha(0, comboMax);
         }
-
+        marbleSpawnerComponent.fever = false;
+        fever = false;
         currentCombo = 0;
 
         yield return null;
@@ -66,7 +71,15 @@ public class GemCombo : MonoBehaviour {
     IEnumerator ComboTextScale()
     {
         Vector2 currentScale = comboTextFeedback.transform.localScale;
-        comboTextFeedback.text = "Gems  x " + currentCombo * marblesPerCombo;
+        if(currentCombo < 5)
+        {
+            comboTextFeedback.text = "Gems  x " + currentCombo * marblesPerCombo;
+        }
+        else if(!fever)
+        {
+            fever = true;
+            comboTextFeedback.text = "Gems FEVER !";
+        }
         comboTextFeedback.fontSize = 22 + currentCombo * 8;
 
         while (currentScale != Vector2.one)

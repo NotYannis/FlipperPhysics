@@ -9,13 +9,11 @@ public class PlatformController : MonoBehaviour {
     float xCenter;
     public bool canRotate = true;
     float yRotation = 0.0f;
-    Text debug;
 
     // Use this for initialization
     void Start () {
         rig = GetComponent<Rigidbody2D>();
         xCenter = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0f, 0f)).x;
-        debug = GameObject.Find("Debug").GetComponent<Text>();
         StartCoroutine(ResetPosition());
 	}
 	
@@ -27,7 +25,6 @@ public class PlatformController : MonoBehaviour {
 
     void RotatePlatform()
     {
-        
         if (canRotate)
         {
 #if !UNITY_EDITOR
