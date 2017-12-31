@@ -224,9 +224,9 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/yannis.attard/Documents/Cours Traitement Signal/PhysicsJointsTest/user.keystore
+  AndroidKeystoreName: C:/Users/yannis.attard/Documents/Unity/PhysicsJointsTest/user.keystore
   AndroidKeyaliasName: pox
-  AndroidTVCompatibility: 1
+  AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1

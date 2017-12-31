@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GemCombo : MonoBehaviour {
     private GameObject marbleSpawner;
-    private GameObject backgroundLayer;
+    private BackgroundBright[] backgroundLayers;
     private Text comboTextFeedback;
 
     public int marblesPerCombo = 2;
@@ -20,8 +20,14 @@ public class GemCombo : MonoBehaviour {
     void Start () {
         marbleSpawner = GameObject.Find("MarbleSpawner");
         marbleSpawner.transform.localScale = new Vector3(0.0f, marbleSpawner.transform.localScale.y, 1.0f);
+        backgroundLayers = GameObject.Find("Background/Layers").GetComponentsInChildren<BackgroundBright>();
 
         comboTextFeedback = GameObject.Find("ComboUI").GetComponentInChildren<Text>();
+
+        for (int i = 0; i < backgroundLayers.Length; i++)
+        {
+            backgroundLayers[i].UpdateAlpha(0, comboMax);
+        }
     }
 
     IEnumerator ComboCooldown()
@@ -34,17 +40,27 @@ public class GemCombo : MonoBehaviour {
         while (currentComboCooldown > 0.0f)
         {
             currentComboCooldown -= Time.deltaTime;
+
             percent = currentComboCooldown / comboCooldown;
 
+            //Modifiy the spawner's scale 
             marbleSpawnerScale.x = Mathf.Lerp(marbleSpawner.transform.localScale.x, currentCombo * percent, 0.1f);
-
             marbleSpawner.transform.localScale = marbleSpawnerScale;
 
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
+
+        //Reset all values
         marbleSpawnerScale.x = 0.0f;
         marbleSpawner.transform.localScale = marbleSpawnerScale;
+        for (int i = 0; i < backgroundLayers.Length; i++)
+        {
+            backgroundLayers[i].UpdateAlpha(0, comboMax);
+        }
+
         currentCombo = 0;
+
+        yield return null;
     }
 
     IEnumerator ComboTextScale()
@@ -73,8 +89,6 @@ public class GemCombo : MonoBehaviour {
         yield return null;
     }
 
-
-
     public int AddCombo()
     {
         currentCombo++;
@@ -90,6 +104,11 @@ public class GemCombo : MonoBehaviour {
 
         StartCoroutine(ComboTextScale());
         comboCooldownCoroutine = StartCoroutine(ComboCooldown());
+
+        for (int i = 0; i < backgroundLayers.Length; i++)
+        {
+            backgroundLayers[i].UpdateAlpha(currentCombo, comboMax);
+        }
 
         return marblesToSpawnCount;
     }

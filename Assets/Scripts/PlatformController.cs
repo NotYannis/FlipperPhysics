@@ -22,21 +22,24 @@ public class PlatformController : MonoBehaviour {
 
     void RotatePlatform()
     {
+        
         if (canRotate)
         {
 #if !UNITY_EDITOR
 #if UNITY_ANDROID || UNITY_IOS
-            if(Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(0).phase == TouchPhase.Stationary)
-            {
-                float xTouchPosition = Input.GetTouch(0).position.x;
+            if(Input.touchCount > 0){
+                if(Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(0).phase == TouchPhase.Stationary)
+                {
+                    float xTouchPosition = Input.GetTouch(0).position.x;
 
-                if(xTouchPosition < xCenter)
-                {
-                    rig.AddTorque(-force, ForceMode2D.Impulse);
-                }
-                else
-                {
-                    rig.AddTorque(force, ForceMode2D.Impulse);
+                    if(xTouchPosition < xCenter)
+                    {
+                        rig.AddTorque(-force, ForceMode2D.Impulse);
+                    }
+                    else
+                    {
+                        rig.AddTorque(force, ForceMode2D.Impulse);
+                    }
                 }
             }
 #endif
@@ -51,7 +54,7 @@ public class PlatformController : MonoBehaviour {
             {
                 rig.AddTorque(force, ForceMode2D.Impulse);
             }
-            #endif
+#endif
         }
 
     }
