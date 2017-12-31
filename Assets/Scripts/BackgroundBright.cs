@@ -55,7 +55,6 @@ public class BackgroundBright : MonoBehaviour {
                 StartCoroutine(StartChange());
             }
         }
-
     }
 
 	IEnumerator StartChange()
