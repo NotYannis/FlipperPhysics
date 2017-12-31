@@ -15,8 +15,6 @@ public class MarbleSpawner : MonoBehaviour {
     public int marblesToSpawnCount;
     public float forceAtSpawn;
     public bool fever;
-
-    private Coroutine comboFeverCoroutine;
     // Use this for initialization
     void Start () {
         marblePools = GameObject.Find("Marbles").GetComponentsInChildren<ObjectPooled>();
@@ -48,7 +46,7 @@ public class MarbleSpawner : MonoBehaviour {
             if (fever == false)
             {
                 fever = true;
-                comboFeverCoroutine = StartCoroutine(ComboFever());
+                StartCoroutine(ComboFever());
             }
         }
     }

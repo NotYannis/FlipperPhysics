@@ -1873,6 +1873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   marblesToSpawnCount: 0
   forceAtSpawn: 0.1
+  fever: 0
 --- !u!212 &941905324
 SpriteRenderer:
   m_ObjectHideFlags: 0

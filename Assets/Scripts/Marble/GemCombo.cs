@@ -14,7 +14,7 @@ public class GemCombo : MonoBehaviour {
     public float comboCooldown;
     public int currentCombo = 0;
     public int comboMax = 5;
-    private bool fever;
+    public bool fever;
 
     Coroutine comboCooldownCoroutine;
 
@@ -70,33 +70,37 @@ public class GemCombo : MonoBehaviour {
 
     IEnumerator ComboTextScale()
     {
-        Vector2 currentScale = comboTextFeedback.transform.localScale;
-        if(currentCombo < 5)
+        if (!fever)
         {
-            comboTextFeedback.text = "Gems  x " + currentCombo * marblesPerCombo;
-        }
-        else if(!fever)
-        {
-            fever = true;
-            comboTextFeedback.text = "Gems FEVER !";
-        }
-        comboTextFeedback.fontSize = 22 + currentCombo * 8;
+            Vector2 currentScale = comboTextFeedback.transform.localScale;
+            if(currentCombo < 5)
+            {
+                comboTextFeedback.text = "Gems  x " + currentCombo * marblesPerCombo;
+            }
+            else
+            {
+                fever = true;
+                comboTextFeedback.text = "Gems FEVER !";
+            }
+            comboTextFeedback.fontSize = 22 + currentCombo * 8;
 
-        while (currentScale != Vector2.one)
-        {
-            currentScale = Vector2.MoveTowards(currentScale, Vector2.one, 0.1f);
-            comboTextFeedback.transform.localScale = currentScale;
+            while (currentScale != Vector2.one)
+            {
+                currentScale = Vector2.MoveTowards(currentScale, Vector2.one, 0.1f);
+                comboTextFeedback.transform.localScale = currentScale;
 
-            yield return null;
-        }
-        yield return new WaitForSeconds(0.5f);
+                yield return null;
+            }
+            yield return new WaitForSeconds(0.5f);
 
-        while (currentScale != Vector2.zero)
-        {
-            currentScale = Vector2.MoveTowards(currentScale, Vector2.zero, 0.1f);
-            comboTextFeedback.transform.localScale = currentScale;
+            while (currentScale != Vector2.zero)
+            {
+                currentScale = Vector2.MoveTowards(currentScale, Vector2.zero, 0.1f);
+                comboTextFeedback.transform.localScale = currentScale;
 
-            yield return null;
+                yield return null;
+            }
+
         }
 
         yield return null;
